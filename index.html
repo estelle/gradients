@@ -485,9 +485,30 @@ background: linear-gradient(<span id="basicgradient"></span>brown, khaki);
      <script defer="">
 			function basicGradientChange(event) {
 				var value = document.getElementById('slct_basicgradient').value, invertvalue;
-				
+				console.log(value);
+				switch (value) {
+					case "top":
+					case "bottom":
+						 invertvalue = 'left'; 
+						 break;
+					
+					case "left":
+					case "right":
+						 invertvalue = 'top'; 
+						 break;
+					case "top left":
+					case "bottom right":
+						 invertvalue = 'bottom left'; 
+						 break;
+					
+					case "bottom left":
+					case "top right":
+						 invertvalue = 'bottom right'; 
+						 break;
+					default: invertvalue = '';
+				}
                 document.getElementById('basiclinear').style.background = 
-                    '-webkit-linear-gradient(' + value + ', transparent 49.75%, black 49.75%, black 50%, transparent 50%), -webkit-linear-gradient(' + value + ', brown, khaki)';
+                    '-webkit-linear-gradient(' + invertvalue + ', transparent 49.75%, black 49.75%, black 50%, transparent 50%), -webkit-linear-gradient(' + value + ', brown, khaki)';
 				
 				if(value) {
                 	document.getElementById('basicgradient').innerHTML = value + ", ";
@@ -516,9 +537,10 @@ background: linear-gradient(<span id="basiclinearangles"></span>brown, khaki);
 			function angleGradientChange(event) {
 				var value = document.getElementById('slct_basiclinearangles').value || 270;
 				var degvalue = value + "deg";
+				var invertvalue = value - 90;
 			
                 document.getElementById('slide_basiclinearangles').style.background = 
-                    '-webkit-linear-gradient(' + value + 'deg, transparent 49.75%, black 49.75%, black 50%, transparent 50%),-webkit-linear-gradient(' + degvalue + ', brown, khaki)';
+                    '-webkit-linear-gradient(' + invertvalue + 'deg, transparent 49.75%, black 49.75%, black 50%, transparent 50%),-webkit-linear-gradient(' + degvalue + ', brown, khaki)';
 				
 				if(value) {
                 	document.getElementById('basiclinearangles').innerHTML = "<b>" + degvalue + "</b>, ";
@@ -545,7 +567,7 @@ background: linear-gradient(<span id="anglevkeyterm"></span>brown, khaki);
 
      <script defer="">
 			function angleNotEqual(angle) {
-				var invertvalue = (angle == '45deg') ? "45deg" : "bottom left"; 
+				var invertvalue = (angle == '45deg') ? "-45deg" : "top left"; 
 			
                 document.getElementById('slide_anglevkeyterm').style.background = 
                     '-webkit-linear-gradient(' + invertvalue + ', transparent 49.75%, black 49.75%, black 50%, transparent 50%),-webkit-linear-gradient(' + angle + ', brown, khaki)';
