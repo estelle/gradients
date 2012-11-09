@@ -33,9 +33,9 @@ background-size: 40px 40px;
 	height: 200px;
 	width: 200px;
 	background-image:
-		linear-gradient(#C7573A 5px, transparent 5px, transparent 145px, #C7573A 145px),
-		linear-gradient(left, #C7573A 5px, transparent 5px, transparent 145px, #C7573A 145px), 
-		linear-gradient(#BDD9D5, #C7573A, #BDD9D5);
+		linear-gradient(palegoldenrod 5px, transparent 5px, transparent 145px, palegoldenrod 145px),
+		linear-gradient(left, palegoldenrod 5px, transparent 5px, transparent 145px, palegoldenrod 145px), 
+		linear-gradient(#BDD9D5, palegoldenrod, #BDD9D5);
 	background-size: 200px 150px, 150px 200px, 150px 150px;
 	background-position: center;
 	background-position: no-repeat;	
@@ -45,14 +45,14 @@ background-size: 40px 40px;
    padding: 60px 0; box-sizing:border-box; text-shadow: 2px 2px 0 #fff, -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff;}
    
     .multiplebg {
-	background-image: linear-gradient(#C7573A, #C7573A), linear-gradient(#BDD9D5,#BDD9D5);
+	background-image: linear-gradient(palegoldenrod, palegoldenrod), linear-gradient(#BDD9D5,#BDD9D5);
 	background-size: 180px 180px;
 	background-repeat: no-repeat;
 	background-position: 0 0, 20px 20px;
 	 
  }
  .bgimage {
-	background-image: radial-gradient(50% 50%, circle closest-side, transparent 70%, #C7573A 70%,#C7573A 85%,transparent  85% );
+	background-image: radial-gradient(50% 50%, circle closest-side, transparent 70%, palegoldenrod 70%,palegoldenrod 85%,transparent  85% );
 	background-size: 190px 190px;
 	background-repeat: no-repeat;
 	background-position: 0 0;
@@ -99,8 +99,11 @@ background-image:
  .grad1 header {background-color: rgba(255,255,255,0.8);}
  
  .basiclinear {
-	 background: linear-gradient(brown, khaki);
+	 background: linear-gradient(indianred, palegoldenrod);
  }
+ .basiclinearnoprefix {
+   background: linear-gradient(to bottom, indianred, palegoldenrod);
+}
 .dark header{
 	background-color: rgba(255,255,255,0.5);
  }
@@ -140,7 +143,7 @@ background-image:
 	position:relative;
 }
 .comparegradkeyterm  {
-	background:-webkit-linear-gradient(bottom left, brown, khaki, brown,  khaki, brown,  khaki, brown, khaki);
+	background:-webkit-linear-gradient(bottom left, indianred, palegoldenrod, indianred,  palegoldenrod, indianred,  palegoldenrod, indianred, palegoldenrod);
 }
 .comparegradkeyterm div{
 	background: linear-gradient(bottom left, transparent 49.95%, black 49.95%, black 50%, transparent 50%);
@@ -148,7 +151,7 @@ background-image:
 }
 
 .comparegradangle {
-	background:-webkit-linear-gradient(45deg, brown, khaki, brown,  khaki, brown,  khaki, brown, khaki);
+	background:-webkit-linear-gradient(45deg, indianred, palegoldenrod, indianred,  palegoldenrod, indianred,  palegoldenrod, indianred, palegoldenrod);
 }
 .comparegradangle div{
 	background: linear-gradient(45deg, transparent 49.5%, black 49.5%, black 50%, transparent 50%);
@@ -187,12 +190,12 @@ background-image:
 }
 #rainbow5b {
 	background-image: linear-gradient(90deg,
-  #C7573A 40%,
+  palegoldenrod 40%,
   #BDD9D5 60%);	
 }
 
 #angledStripes {
-	background-color: #C7573A;
+	background-color: indianred;
 	background-image: 
 			linear-gradient(135deg,
 					rgba(255, 255, 255, 0.2) 25%, 
@@ -207,7 +210,7 @@ background-image:
 	background-repeat: repeat;
 }
 #tablecloth, #ancientgrad {
-background-color: #C7573A;
+background-color: indianred;
 background-image: 
     linear-gradient(
     	rgba(255, 255, 255, 0.2) 50%, 
@@ -229,31 +232,31 @@ background-image:
 #radial01 {
 background-image:
   radial-gradient( 
-  #C7573A, 
+  palegoldenrod, 
   #BDD9D5);	
 }
 #radial02 {
 background-image:
   radial-gradient(25% 35%, 
-  #C7573A, 
+  palegoldenrod, 
   #BDD9D5);	
 }
 #radial03 {
 background-image:
   radial-gradient(25% 35%, 
-  #C7573A 20%, 
+  palegoldenrod 20%, 
   #BDD9D5 20%);	
 }
 #radial04 {
 background-image:
   radial-gradient(75% 75%, circle,
-  #C7573A 20%, 
+  palegoldenrod 20%, 
   #BDD9D5 20%);	
 }
 #radial05 {
 background-image:
   radial-gradient(75% 75%, farthest-corner,
-  #C7573A, 
+  palegoldenrod, 
   #BDD9D5);	
 }
 
@@ -261,7 +264,7 @@ background-image:
 background-image:radial-gradient(
      circle, 
       #BDD9D5 50%,
-      #C7573A 50%);
+      palegoldenrod 50%);
 background-size: 50px 50px;
 background-repeat:repeat;
 background-color: red;
@@ -274,9 +277,11 @@ input[type=range] {width: 360px;}
 	-o-transform:rotate(90deg);  
 	transform:rotate(90deg);
 }
-/* color: #C7573A; 
+/* color: indianred; 
 BDD9D5*/
  </style>
+
+ <link rel="stylesheet" href="noprefix.css"  data-noprefix="true">
   </head> 
   <body> <header>
     <nav>
@@ -416,58 +421,157 @@ BDD9D5*/
  </div>
 
 <!-- W3C syntax --> 
- <div class="slide normal"> 
-     <header><h1>Linear Gradient Syntax</h1></header> 
+ <div class="slide normal" style="background-image: 
+    -webkit-gradient(linear, 0 0, 100% 100%, 
+        color-stop(0.5, rgba(255, 255, 255, 0.25)), 
+        color-stop(0.5, rgba(255, 255, 255, 0.5)), 
+        color-stop(1, rgba(255, 255, 255, 0)));
+    background-image: 
+    -moz-gradient(linear, 0 0, 100% 100%, 
+        color-stop(0.5, rgba(255, 255, 255, 0.25)), 
+        color-stop(0.5, rgba(255, 255, 255, 0.5)), 
+        color-stop(1, rgba(255, 255, 255, 0)));
+    background-color: palegoldenrod"> 
+     <header style="background-color: rgba(255,255,255,0.5)"><h1 >Original Webkit Gradient Syntax</h1></header> 
      <section class="content">
-     <p>Really old Webkit</p>
-     <pre contenteditable>gradient(linear, startX startY, endX endY, color-stop, color-stop);</pre>
-     <p>Current</p>
-     <pre contenteditable>linear-gradient(<em>&lt;angle&gt;</em>|<em>&lt;term&gt;</em>, <em>&lt;colorstop&gt;</em>, <em>&lt;colorstop&gt;</em>)</pre>
-     <p>Future</p>
+     <p>Really old Webkit Syntax (i.e. Older Android, iPhone devices)</p>
+     <pre contenteditable>-webkit-gradient(linear, startX startY, endX endY, 
+      color-stop, 
+      color-stop);</pre>
+      <p>Color Stop</p>
+      <pre contenteditable>color-stop(0-1, color)</pre>
+     <p>Example</p>
+     <pre contenteditable>background-image: 
+    -webkit-gradient(linear, 0 0, 100% 100%, 
+        color-stop(0.5, rgba(255, 255, 255, 0.25)), 
+        color-stop(0.5, rgba(255, 255, 255, 0.5)), 
+        color-stop(1, rgba(255, 255, 255, 0)));
+background-color: indianred;</pre>
+     
+     </section>
+ </div>
+
+
+<div class="slide object"> 
+  <object data="files/oldlinearsyntax.html"></object>
+  <a href="files/oldlinearsyntax.html" class="objectlink" target="_new">Try it out</a>
+ </div> 
+
+<!-- prefixed syntax --> 
+ <div class="slide normal"> 
+     <header><h1>Prefixed, older Linear Gradient Syntax</h1></header> 
+     <section class="content">
+     <pre contenteditable>-prefix-gradient(<em>&lt;angle&gt;</em>|<em>&lt;term&gt;</em>, <em>&lt;colorstop&gt;</em>, <em>&lt;colorstop&gt;</em>)</pre>
+      <p>Color Stop</p>
+      <pre contenteditable>color length</pre>
+      <p>Example</p>
+     <pre contenteditable>background-image:  
+     -prefix-linear-gradient(270deg, indianred 0%, palegoldenrod 100%);</pre>
+     </section>
+ </div>
+
+
+
+  <!-- simple syntax -->
+ <div class="slide dark object basiclinear"> 
+     <header><h1>Prefixed Linear Gradient Syntax</h1></header> 
+     <section class="content" style="margin-top:50px;">
+
+<pre contenteditable><span style="opacity: 0.3;">/* Old Syntax */</span>  
+background-image: 
+     gradient(-prefix-linear, 0 0, 0 100%, indianred, palegoldenrod);
+
+<span style="opacity: 0.3;">/* prefixed syntax // all the same */</span>  
+background-image: 
+     -prefix-linear-gradient(indianred, palegoldenrod); 
+
+background-image: 
+     -prefix-linear-gradient(top, indianred, palegoldenrod); 
+
+background-image: 
+     -prefix-linear-gradient(270deg, indianred, palegoldenrod); 
+
+background-image: 
+     -prefix-linear-gradient(top, indianred 0%, palegoldenrod 100%);
+
+background-image:  
+     -prefix-linear-gradient(270deg, indianred 0%, palegoldenrod 100%);        
+</pre>
+</section>
+</div>
+
+
+
+ <div class="slide object"> 
+  <object data="files/prefixedlinearsyntax.html"></object>
+  <a href="files/prefixedlinearsyntax.html" class="objectlink" target="_new">Try it out</a>
+ </div> 
+
+
+
+
+ <!-- W3C syntax --> 
+ <div class="slide normal"> 
+     <header><h1>W3C Standard Linear Gradient Syntax</h1></header> 
+     <section class="content">
      <pre contenteditable>linear-gradient(<em>&lt;angle&gt;</em>| to <em>&lt;term&gt;</em>, <em>&lt;colorstop&gt;</em>, <em>&lt;colorstop&gt;</em>)</pre> 
+     <p>Key differences:</p>
+     <ol>
+      <li>Use 'to' with keyterms</li>
+      <li>Opposite direction for angles - counter clockwise (v. clockwise)</li>
+      <li>0deg is from left (v. 0deg from bottom)</li>
+      <li>
+     </ol>
      </section>
  </div>
  
- <!-- simple syntax -->
- <div class="slide dark object basiclinear"> 
-     <header><h1>Basic Linear Gradient Syntax</h1></header> 
+
+
+
+ <!-- W3C syntax -->
+ <div class="slide dark object basiclinearnoprefix"> 
+     <header><h1>W3C Standard Linear Gradient Syntax</h1></header> 
      <section class="content" style="margin-top:50px;">
 
 <pre contenteditable><span style="opacity: 0.3;">/* Previous Syntax */</span>  
 background-image: 
-     gradient(linear, 0 0, 0 100%, brown, khaki);
+     gradient(linear, 0 0, 0 100%, indianred, palegoldenrod);
 
-<span style="opacity: 0.3;">/* Current prefixed syntax // all the same */</span>  
-background-image: 
-     linear-gradient(brown, khaki); 
+<span style="opacity: 0.3;">/* Supported prefixed syntax // all the same */</span>
 
 background-image: 
-     linear-gradient(top, brown, khaki); 
-
-background-image: 
-     linear-gradient(270deg, brown, khaki); 
-
-background-image: 
-     linear-gradient(top, brown 0%, khaki 100%);
-
-background-image:  
-     linear-gradient(270deg, brown 0%, khaki 100%);        
+     linear-gradient(top, indianred 0%, palegoldenrod 100%);       
   
-<span style="opacity: 0.3;">/* future syntax (-moz- in FF10) */ </span> 
+<span style="opacity: 0.3;">/* W3C Standards Syntax 
+  (-moz- in FF10, no prefix in FF16 / Opera 12.1) */ </span> 
 background-image: 
-    -moz-linear-gradient(to bottom, brown, khaki); </pre>
-	  
+    linear-gradient(to bottom, indianred 0%, palegoldenrod 100%); </pre>
+
+<span style="opacity: 0.3;">/* SLIDE ONLY WORKS IF SUPPORTED */ </span>   
      </section>
  </div>
  
+
+
+
+
+ <div class="slide object"> 
+  <object data="files/w3clinearsyntax.html"></object>
+  <a href="files/w3clinearsyntax.html" class="objectlink" target="_new">Try it out</a>
+ </div> 
+
+
+
+
  <!-- keyterm values -->
  <div class="slide dark object basiclinear" id="basiclinear"> 
      <header><h1>Basic Syntax: Linear Gradient</h1></header> 
      <section class="content" style="margin-top:100px;">
      <pre contenteditable>
 
-background: linear-gradient(<span id="basicgradient"></span>brown, khaki);
-      <select onChange="basicGradientChange();" id="slct_basicgradient" style="float:right">
+background: linear-gradient(<span id="basicgradient"></span>indianred, palegoldenrod);  
+     </pre> 
+      <select onChange="basicGradientChange();" id="slct_basicgradient">
    		<option value=""></option>
         <option value="top">top</option>
         <option value="bottom">bottom</option>
@@ -477,8 +581,7 @@ background: linear-gradient(<span id="basicgradient"></span>brown, khaki);
         <option value="top right">top right</option>
         <option value="bottom left">bottom left</option>
         <option value="bottom right">bottom right</option>
-   </select>   
-     </pre> 
+   </select> 
    
    		<pre style="float: left" contenteditable>&lt;angle&gt;
   top
@@ -524,9 +627,9 @@ background: linear-gradient(<span id="basicgradient"></span>brown, khaki);
 					default: invertvalue = '';
 				}
                 document.getElementsByClassName('basiclinearslide')[0].style.background = 
-                    '-webkit-linear-gradient(' + value + ', transparent 49.75%, black 49.75%, black 50%, transparent 50%)';
+                    window.cssPrefix + 'linear-gradient(' + value + ', transparent 49.75%, black 49.75%, black 50%, transparent 50%)';
 				document.getElementById('basiclinear').style.background = 
-					'-webkit-linear-gradient(' + value + ', brown, khaki)';
+					window.cssPrefix + 'linear-gradient(' + value + ', indianred, palegoldenrod)';
 				
 				if(value) {
                 	document.getElementById('basicgradient').innerHTML = value + ", ";
@@ -538,6 +641,15 @@ background: linear-gradient(<span id="basicgradient"></span>brown, khaki);
      </section>
      <div class="basiclinearslide gradientpoop"></div>
  </div>
+
+
+
+ <div class="slide object"> 
+  <object data="files/keytermsyntax.html"></object>
+  <a href="files/keytermsyntax.html" class="objectlink" target="_new">Try it out</a>
+ </div> 
+
+
  
  <!-- angle values -->
  <div class="slide dark object basiclinear" id="slide_basiclinearangles"> 
@@ -545,7 +657,7 @@ background: linear-gradient(<span id="basicgradient"></span>brown, khaki);
      <section class="content" style="margin-top:100px;">
      <pre contenteditable>
 
-background: linear-gradient(<span id="basiclinearangles"></span>brown, khaki);
+background: linear-gradient(<span id="basiclinearangles"></span>indianred, palegoldenrod);
      
      </pre> 
    <input type="range" min="0" max="360" onChange="angleGradientChange();" id="slct_basiclinearangles" />
@@ -559,9 +671,9 @@ background: linear-gradient(<span id="basiclinearangles"></span>brown, khaki);
 				var invertvalue = value - 90;
 			
                 document.getElementsByClassName('slide_basiclinearangles')[0].style.background = 
-                    '-webkit-linear-gradient(' + value + 'deg, transparent 49.75%, black 49.75%, black 50%, transparent 50%)'
+                    window.cssPrefix + 'linear-gradient(' + value + 'deg, transparent 49.75%, black 49.75%, black 50%, transparent 50%)'
 				document.getElementById('slide_basiclinearangles').style.background = 
-					'-webkit-linear-gradient(' + degvalue + ', brown, khaki)';
+					window.cssPrefix + 'linear-gradient(' + degvalue + ', indianred 45%, palegoldenrod 55%)';
 				
 				if(value) {
                 	document.getElementById('basiclinearangles').innerHTML = "<b>" + degvalue + "</b>, ";
@@ -574,13 +686,54 @@ background: linear-gradient(<span id="basiclinearangles"></span>brown, khaki);
      <div class="slide_basiclinearangles gradientpoop"></div>
  </div>
  
+
+
+<!-- angle values -->
+ <div class="slide dark object basiclinear" id="slide_basiclinearangles2"> 
+     <header><h1>W3C Linear Gradient Angles</h1></header> 
+     <section class="content" style="margin-top:100px;">
+     <pre contenteditable>
+
+background: linear-gradient(<span id="basiclinearangles2"></span>indianred, palegoldenrod);
+     
+     </pre> 
+   <input type="range" min="0" max="360" onChange="angleGradientChange2();" id="slct_basiclinearangles2" />
+      
+<a href="../html5mobile/files/91_basic.html" class="objectlink" target="play">Try it</a>
+
+     <script defer="">
+      function angleGradientChange2(event) {
+        var value = document.getElementById('slct_basiclinearangles2').value || 270;
+        var degvalue = value + "deg";
+        var invertvalue = value - 90;
+      
+                document.getElementsByClassName('slide_basiclinearangles2')[0].style.background = 
+                    'linear-gradient(' + value + 'deg, transparent 49.75%, black 49.75%, black 50%, transparent 50%)'
+        document.getElementById('slide_basiclinearangles2').style.background = 
+          'linear-gradient(' + degvalue + ', indianred 45%, palegoldenrod 55%)';
+        
+        if(value) {
+                  document.getElementById('basiclinearangles2').innerHTML = "<b>" + degvalue + "</b>, ";
+        } else {
+          document.getElementById('basiclinearangles2').innerHTML = "";
+        }
+              }
+  </script>     
+     </section>
+     <div class="slide_basiclinearangles2 gradientpoop"></div>
+ </div>
+ 
+
+
+
+
  <!-- angels != keyterms --> 
  <div class="slide dark object basiclinear" id="slide_anglevkeyterm"> 
      <header><h1>Angles ≠ Keyterms</h1></header> 
      <section class="content" style="margin-top:100px;">
      <pre contenteditable>
 
-background: linear-gradient(<span id="anglevkeyterm"></span>brown, khaki);
+background: linear-gradient(<span id="anglevkeyterm"></span>indianred, palegoldenrod);
      
      </pre> 
    <button onClick="angleNotEqual('45deg')">45deg</button> <button onClick="angleNotEqual('bottom left')">bottom left</button>
@@ -591,9 +744,9 @@ background: linear-gradient(<span id="anglevkeyterm"></span>brown, khaki);
 			function angleNotEqual(angle) {
 				console.log('hi');
                 document.getElementsByClassName('slide_anglevkeyterm')[0].style.background = 
-                    '-webkit-linear-gradient(' + angle + ', transparent 49.75%, black 49.75%, black 50%, transparent 50%)';
+                    window.cssPrefix + 'linear-gradient(' + angle + ', transparent 49.75%, black 49.75%, black 50%, transparent 50%)';
 				document.getElementById('slide_anglevkeyterm').style.background =   
-					'-webkit-linear-gradient(' + angle + ', brown, khaki)';
+					window.cssPrefix + 'linear-gradient(' + angle + ', indianred, palegoldenrod)';
                 document.getElementById('anglevkeyterm').innerHTML = "<b>" + angle + "</b>, ";
               }
 	</script>		  
@@ -720,7 +873,7 @@ background: linear-gradient(<span id="anglevkeyterm"></span>brown, khaki);
 <pre style="background-color: rgba(255,255,255,0.7)">.centeredGradient {
   background-image:
     <span contenteditable id="colorme5b"  onKeyUp="changeBackgroundGradient('rainbow5b','#colorme5b')">linear-gradient(90deg,
-       #C7573A 40%,
+       palegoldenrod 40%,
        #BDD9D5 60%
     )</span>; 	
 }</pre> 
@@ -731,7 +884,7 @@ background: linear-gradient(<span id="anglevkeyterm"></span>brown, khaki);
 <div class="slide object angledStripes" id="angledStripes"> 
      <header><h1>Stripes with background-size</h1></header> 
      <section class="content">
-<pre style="background-color: rgba(255,255,255,0.7)">background-color: <span id="feature01" onKeyUp="changeFeature('backgroundColor', 'feature01', 'angledStripes')" contenteditable>#C7573A</span>;
+<pre style="background-color: rgba(255,255,255,0.7)">background-color: <span id="feature01" onKeyUp="changeFeature('backgroundColor', 'feature01', 'angledStripes')" contenteditable>palegoldenrod</span>;
 background-image: 
    <span contenteditable id="colorme6"  onKeyUp="changeBackgroundGradient('angledStripes','#colorme6')">linear-gradient(135deg,
     rgba(255, 255, 255, 0.2) 25%, 
@@ -753,7 +906,7 @@ background-repeat: <span id="feature03" onKeyUp="changeFeature('backgroundRepeat
  <div class="slide object angledStripes" id="tablecloth"> 
      <header><h1>Different effects</h1></header> 
      <section class="content">
-<pre style="background-color: rgba(255,255,255,0.7)">background-color: <span id="feature04" onKeyUp="changeFeature('backgroundColor', 'feature04', 'tablecloth')" contenteditable>#C7573A</span>;
+<pre style="background-color: rgba(255,255,255,0.7)">background-color: <span id="feature04" onKeyUp="changeFeature('backgroundColor', 'feature04', 'tablecloth')" contenteditable>palegoldenrod</span>;
 
 background-image: 
     linear-gradient(
@@ -777,7 +930,7 @@ background-size: <span id="feature05" onKeyUp="changeFeature('backgroundSize', '
         color-stop(0.5, rgba(255, 255, 255, 0.25)), 
         color-stop(0.5, rgba(255, 255, 255, 0)), 
         color-stop(1, rgba(255, 255, 255, 0)));
-    background-color: <span id="feature06" onKeyUp="changeFeature('backgroundColor', 'feature06', 'ancientgrad')" contenteditable>#C7573A</span>
+    background-color: <span id="feature06" onKeyUp="changeFeature('backgroundColor', 'feature06', 'ancientgrad')" contenteditable>palegoldenrod</span>
     background-size: <span id="feature07" onKeyUp="changeFeature('backgroundSize', 'feature07', 'ancientgrad')" contenteditable>100px 100px</span>;
 } </pre>
      </section>
@@ -822,7 +975,7 @@ background-size: <span id="feature05" onKeyUp="changeFeature('backgroundSize', '
      <pre contenteditable>.thisSlide {
   background-image: 
     <span contenteditable id="radialfeature01" onKeyUp="changeBackgroundGradient('radial01','#radialfeature01')">radial-gradient( 
-      #C7573A, 
+      palegoldenrod, 
       #BDD9D5)</span>;
 }</pre> 
      </section>
@@ -836,7 +989,7 @@ background-size: <span id="feature05" onKeyUp="changeFeature('backgroundSize', '
      <pre contenteditable>.thisSlide {
   background-image: 
     <span contenteditable id="radialfeature02" onKeyUp="changeBackgroundGradient('radial02','#radialfeature02')">radial-gradient(25% 35%, 
-      #C7573A, 
+      palegoldenrod, 
       #BDD9D5)</span>;
 }</pre> 
      </section>
@@ -851,7 +1004,7 @@ background-size: <span id="feature05" onKeyUp="changeFeature('backgroundSize', '
      <pre contenteditable>.thisSlide {
   background-image: 
     <span contenteditable id="radialfeature03" onKeyUp="changeBackgroundGradient('radial03','#radialfeature03')">radial-gradient(25% 35%, 
-      #C7573A 20%, 
+      palegoldenrod 20%, 
       #BDD9D5 20%)</span>;
 }</pre> 
      </section>
@@ -864,7 +1017,7 @@ background-size: <span id="feature05" onKeyUp="changeFeature('backgroundSize', '
      <pre contenteditable>.thisSlide {
   background-image: 
     <span contenteditable id="radialfeature04" onKeyUp="changeBackgroundGradient('radial04','#radialfeature04')">radial-gradient(75% 75%, circle, 
-      #C7573A 20%, 
+      palegoldenrod 20%, 
       #BDD9D5 20%)</span>;
 }</pre> 
 <ul>
@@ -882,7 +1035,7 @@ background-size: <span id="feature05" onKeyUp="changeFeature('backgroundSize', '
   background-image: 
     <span contenteditable id="radialfeature05" onKeyUp="changeBackgroundGradient('radial05','#radialfeature05')">radial-gradient(75% 75%, 
      farthest-corner,
-      #C7573A, 
+      palegoldenrod, 
       #BDD9D5)</span>;
 }</pre> 
 <ul>
@@ -905,7 +1058,7 @@ background-size: <span id="feature05" onKeyUp="changeFeature('backgroundSize', '
     <span contenteditable id="radialfeature06" onKeyUp="changeBackgroundGradient('radial06','#radialfeature06')">radial-gradient(
      circle, 
       #BDD9D5 50%,
-      #C7573A 50%)</span>;
+      palegoldenrod 50%)</span>;
   background-size: <span id="radialfeature06b" onKeyUp="changeFeature('backgroundSize', 'radialfeature06b', 'radial06')" contenteditable>100px 100px</span>;
   background-repeat: <span id="radialfeature06c" onKeyUp="changeFeature('backgroundRepeat', 'radialfeature06c', 'radial06')" contenteditable>repeat</span>;
   background-color: <span id="radialfeature06d" onKeyUp="changeFeature('backgroundColor', 'radialfeature06d', 'radial06')" contenteditable>red</span>;
@@ -921,6 +1074,13 @@ background-size: <span id="feature05" onKeyUp="changeFeature('backgroundSize', '
           <li>@estellevw</li>
           <li>@standardista</li>
           <li>http://www.standardista.com</li>
+      </ul>
+
+
+      <p>Up Next?</p>
+      <ul>
+        <li>CSS Workshop -> <a href="../CSS-Workshop/part_10_transforms.html">Transforms</a></li>
+      </ul>
       </section>
   </div>
  
@@ -935,8 +1095,8 @@ background-size: <span id="feature05" onKeyUp="changeFeature('backgroundSize', '
    function changeBackgroundGradient(pageID,changedText){
 	   	document.getElementById(pageID).style.backgroundImage = PrefixFree.prefix + document.querySelector(changedText).innerHTML;
    }
+
    </script>
-  
   <script src="prefixfree.js"></script>
   </body> 
 </html>

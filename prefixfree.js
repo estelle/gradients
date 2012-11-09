@@ -148,6 +148,7 @@ if(!window.StyleFix || !window.getComputedStyle) {
 var self = window.PrefixFree = {
 	prefixCSS: function(css, raw) {
 		var prefix = self.prefix;
+		window.cssPrefix = prefix;
 
 		function fix(what, before, after, replacement) {
 			what = self[what];

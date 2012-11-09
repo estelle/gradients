@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* CSS Document 
-brown: C7573A
+indianred: C7573A
 blue: BDD9D5;
 */
 div, li, a, p, pre {
@@ -301,7 +301,7 @@ header {
 h1 {
   font-size: 140%;
   margin-bottom: 0px;
-  color: #C7573A;
+  color: indianred;
   text-align:center;
 }
 
@@ -326,7 +326,7 @@ footer {
 }
 
 a {
-  color: #C7573A;
+  color: indianred;
   display: inline-block;
   text-decoration: none;
   line-height: 110%;
@@ -359,7 +359,7 @@ pre, .ex, .pre, .codelike {
 
 pre b, .pre b, .imp {
   font-weight: normal;
-  color: #C7573A;
+  color: indianred;
   text-shadow: #c61800 0 0 1px;
   /*letter-spacing: -1px;*/
 }
@@ -367,7 +367,7 @@ pre b, .pre b, .imp {
 pre em {
   font-weight: normal;
   font-style: normal;
-  color: #C7573A;
+  color: indianred;
   text-shadow: rgba(0,0,0,0.3) 1px 1px 2px;
   font-weight: bold;
 }
@@ -437,7 +437,7 @@ dl.inline dd{
 	font-size: 180%;	
 }
 
-.new:not(li) {color: #C7573A; background-color: #fff; padding: 3px 8px;}
+.new:not(li) {color: indianred; background-color: #fff; padding: 3px 8px;}
 ul.columns {
 	-webkit-column-count: 4;
 	font-size: 80%;
@@ -478,7 +478,7 @@ ul.columns {
 	background-image:url(plankton.png);	
 }
 .object header {position:absolute; top: 10px; width: 100%; text-align:center; background-color: rgba(255,255,255,0.9); left:0;}
-.objectlink {position:absolute;top:0; right:0;color: white; background-color: #C7573A; padding: 3px 5px; border: none;}
+.objectlink {position:absolute;top:0; right:0;color: white; background-color: indianred; padding: 3px 5px; border: none;}
 .slide.object {padding:0;}
 .object object {width: 100%; height: 100%;}
 
@@ -561,11 +561,11 @@ margin: 0;
 
 /* Doctype */
 		.booOff .boo {display:none;}
-		.booshow .boo {color: #C7573A;}
+		.booshow .boo {color: indianred;}
 /* Semantic elements */
 
 #semels > div:first-of-type {margin: auto; width: 700px;}
-		#semels div {border: 2px solid #C7573A; text-align:center; width: 100%; padding:5px; margin: 5px 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;}
+		#semels div {border: 2px solid indianred; text-align:center; width: 100%; padding:5px; margin: 5px 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;}
 		#semels div .divaside {float: left; width: 30%; height:8em;}
 		.divmain , .divarticle{float: left; width: 100%;}
 		#semels .divarticle {width: 69%;float: right;}
@@ -602,25 +602,25 @@ input.button{
 	padding: 5px 20px;
 	background: -moz-linear-gradient(
 		top,
-		brown 25%,
-		#C7573A);
+		indianred 25%,
+		palegoldenrod);
 	background: -webkit-gradient(
 		linear, left top, left bottom, 
 		from(#BDD9D5),
 		color-stop(0.25, #BDD9D5),
-		to(#C7573A));
+		to(palegoldenrod));
 	background: -webkit-linear-gradient(
 		top,
-		brown 25%,
-		#C7573A);
+		indianred 25%,
+		palegoldenrod);
 	background: -ms-linear-gradient(
 		top,
-		brown 25%,
-		#C7573A);
+		indianred 25%,
+		palegoldenrod);
 		background: -o-linear-gradient(
 		top,
-		brown 25%,
-		#C7573A);
+		indianred 25%,
+		palegoldenrod);
 	border-radius: 20px;
 	-moz-border-radius: 20px;
 	border: 3px solid #ffffff;
@@ -638,29 +638,29 @@ input.button{
 input.button:hover {
 background: -moz-linear-gradient(
 		bottom,
-		brown 25%,
-		#C7573A);
+		indianred 25%,
+		palegoldenrod);
 	background: -webkit-gradient(
 		linear, left bottom, left top, 
 		from(#ffbdf5),
 		color-stop(0.25, #BDD9D5),
-		to(#C7573A));
+		to(palegoldenrod));
 	background: -webkit-linear-gradient(
 		bottom,
-		brown 25%,
-		#C7573A);
+		indianred 25%,
+		palegoldenrod);
 	background: -ms-linear-gradient(
 		bottom,
-		brown 25%,
-		#C7573A);
+		indianred 25%,
+		palegoldenrod);
 		background: -o-linear-gradient(
 		bottom,
-		brown 25%,
-		#C7573A);	
+		indianred 25%,
+		palegoldenrod);	
 }
 
 figure.styled {
-	border: 3px solid #C7573A;
+	border: 3px solid indianred;
 	border-radius: 8px;
 	float: left;	
 }
@@ -673,7 +673,7 @@ figure.styled img{
 }
 figure.styled figcaption{
 	background-color: rgba(255,255,255,0.5);
-	color: #C7573A;
+	color: indianred;
 	border-top: 3px solid;
 	
 }
