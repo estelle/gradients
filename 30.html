@@ -1,0 +1,818 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>CSS Gradients </title>
+<!--
+
+Author: Estelle Weyl
+Contact: firstName @ lastName dot ORG
+Twitter: @estellevw
+
+-->
+     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+   <link rel="stylesheet" href="screen.css" media="projection, screen"/>
+   <link rel="stylesheet" href="religion.css" media="all"/>
+ <style>
+ .ex_rgba_stripes{
+ background:
+ 	linear-gradient(135deg,
+		rgba(255, 255, 255, 0.2) 25%,
+		rgba(255, 255, 255, 0) 25%,
+		rgba(255, 255, 255, 0) 50%,
+		rgba(255, 255, 255, 0.2) 50%,
+		rgba(255, 255, 255, 0.2) 75%,
+		rgba(255, 255, 255, 0) 75%,
+		rgba(255, 255, 255, 0) 100% ) 40px 40px  #BDD9D5  repeat;
+background-size: 40px 40px;
+
+ }
+
+ .whatisborderimage {
+	margin: auto;
+	height: 200px;
+	width: 200px;
+	background-image:
+		linear-gradient(palegoldenrod 5px, transparent 5px, transparent 145px, palegoldenrod 145px),
+		linear-gradient(left, palegoldenrod 5px, transparent 5px, transparent 145px, palegoldenrod 145px),
+		linear-gradient(#BDD9D5, palegoldenrod, #BDD9D5);
+	background-size: 200px 150px, 150px 200px, 150px 150px;
+	background-position: center;
+	background-position: no-repeat;
+}
+.medexampleshell {width: 600px; margin:auto;}
+.medexample {
+  height: 200px;
+  width: 200px;
+  margin: 0 30px 30px;
+  float: left;
+  text-align: center;
+  padding: 60px 0;
+  box-sizing:border-box;
+  text-shadow:
+    2px 2px 0 #fff,
+    -2px -2px 0 #fff,
+    2px -2px 0 #fff,
+    -2px 2px 0 #fff;
+ }
+
+    .multiplebg {
+	background-image: linear-gradient(palegoldenrod, palegoldenrod), linear-gradient(#BDD9D5,#BDD9D5);
+	background-size: 180px 180px;
+	background-repeat: no-repeat;
+	background-position: 0 0, 20px 20px;
+
+ }
+ .bgimage {
+	background-image: radial-gradient(50% 50%, circle closest-side, transparent 70%, palegoldenrod 70%,palegoldenrod 85%,transparent  85% );
+	background-size: 190px 190px;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+
+
+ }
+ .linear {
+background-image:
+		-webkit-linear-gradient(left,
+			rgba(0,0,0,0.5) 8%,
+			rgba(0,0,0,0.1) 24%);
+}
+ .linrepeat {
+background-image:
+		-webkit-repeating-linear-gradient(left,
+			rgba(0,0,0,0.5) 8%,
+			rgba(0,0,0,0.1) 24%);
+}
+  .radial {
+background-image:
+		-webkit-radial-gradient(40px 40px, circle,
+			rgba(0,0,0,0.9),
+			rgba(0,0,0,0.1) 8%,
+			rgba(0,0,0,0.5) 16%);
+}
+ .radrepeat {
+background-image:
+		-webkit-repeating-radial-gradient(40px 40px, circle,
+			rgba(0,0,0,0.9),
+			rgba(0,0,0,0.1) 8%,
+			rgba(0,0,0,0.5) 16%);
+}
+ .grad {
+	width: 250px;
+	height: 180px;
+	margin: 0 20px 20px 0px;
+	float: left;
+	border-radius: 150px;
+	background-repeat: repeat;
+ }
+ .grad1 {
+	 background-repeat: repeat;
+ }
+ .grad1 header {background-color: rgba(255,255,255,0.8);}
+
+ .basiclinear {
+	 background: linear-gradient(indianred, palegoldenrod);
+ }
+ .basiclinearnoprefix {
+   background: linear-gradient(to bottom, indianred 10%, palegoldenrod 90%);
+}
+.dark header{
+	background-color: rgba(255,255,255,0.5);
+ }
+
+ .angle {
+	position: absolute;
+	padding: 50px 50px 30px 50px;
+	color: rgba(255,255,255,0.01);
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.01);
+	text-align: center;
+
+ }
+.angle:hover {
+
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+		color: white;
+ }
+#basiclinear:after,
+#slide_basiclinearangles:after,
+#slide_anglevkeyterm:after {
+	content: "";
+	background-color: black;
+	top: 49%;
+	left: 49%;
+	bottom: 49%;
+	right: 49%;
+	position:absolute;
+	border-radius: 50%;
+ }
+
+.comparegrad {
+	height: 300px;
+	display: inline-block;
+	width: 300px;
+	border: 5px solid #BDD9D5;
+	margin-right: 10px;
+	position:relative;
+}
+.comparegradkeyterm  {
+	background:-webkit-linear-gradient(bottom left, indianred, palegoldenrod, indianred,  palegoldenrod, indianred,  palegoldenrod, indianred, palegoldenrod);
+}
+.comparegradkeyterm div{
+	background: linear-gradient(bottom left, transparent 49.95%, black 49.95%, black 50%, transparent 50%);
+	-webkit-transform: rotate(90deg) scale(3);
+}
+
+.comparegradangle {
+	background:-webkit-linear-gradient(45deg, indianred, palegoldenrod, indianred,  palegoldenrod, indianred,  palegoldenrod, indianred, palegoldenrod);
+}
+.comparegradangle div{
+	background: linear-gradient(45deg, transparent 49.5%, black 49.5%, black 50%, transparent 50%);
+}
+.rainbow {
+	background: linear-gradient(top, red, orange, yellow, green, blue, purple);
+}
+.rainbow2 {
+  background-image:
+    linear-gradient(top,
+      red 20%,
+      orange 20%,
+      orange 40%,
+      yellow 40%,
+      yellow 60%,
+      green 60%,
+      green 80%,
+      blue 80%
+    );
+	}
+#rainbow5{
+	background-image:
+	repeating-linear-gradient(145deg,
+      red 0,
+	  red 20px,
+      orange 20px,
+      orange 40px,
+      yellow 40px,
+      yellow 60px,
+      green 60px,
+      green 80px,
+      blue 80px,
+	  blue 100px,
+	  purple 100px,
+	  purple 120px);
+}
+#rainbow5b {
+	background-image: linear-gradient(90deg,
+  palegoldenrod 40%,
+  #BDD9D5 60%);
+}
+
+#angledStripes {
+	background-color: indianred;
+	background-image:
+			linear-gradient(135deg,
+					rgba(255, 255, 255, 0.2) 25%,
+					rgba(255, 255, 255, 0) 25%,
+					rgba(255, 255, 255, 0) 50%,
+					rgba(255, 255, 255, 0.2) 50%,
+					rgba(255, 255, 255, 0.2) 75%,
+					rgba(255, 255, 255, 0) 75%,
+					rgba(255, 255, 255, 0) 100%
+	  				);
+	background-size: 100px 100px;
+	background-repeat: repeat;
+}
+#tablecloth, #ancientgrad {
+background-color: indianred;
+background-image:
+    linear-gradient(
+    	rgba(255, 255, 255, 0.2) 50%,
+    	rgba(255, 255, 255, 0) 50%),
+    linear-gradient(left,
+    	rgba(255, 255, 255, 0.2) 50%,
+    	rgba(255, 255, 255, 0) 50%);
+	background-size: 100px 100px;
+	background-repeat: repeat;
+}
+
+#ancientgrad {
+	 background-image:
+    -webkit-gradient(linear, 0 0, 100% 0,
+        color-stop(0.5, rgba(255, 255, 255, 0.25)),
+        color-stop(0.5, rgba(255, 255, 255, 0)),
+        color-stop(1, rgba(255, 255, 255, 0)));
+}
+#radial01 {
+background-image:
+  radial-gradient(
+  palegoldenrod,
+  #BDD9D5);
+}
+#radial02 {
+background-image:
+  radial-gradient(25% 35%,
+  palegoldenrod,
+  #BDD9D5);
+}
+#radial03 {
+background-image:
+  radial-gradient(25% 35%,
+  palegoldenrod 20%,
+  #BDD9D5 20%);
+}
+#radial04 {
+background-image:
+  radial-gradient(75% 75%, circle,
+  palegoldenrod 20%,
+  #BDD9D5 20%);
+}
+#radial05 {
+background-image:
+  radial-gradient(75% 75%, farthest-corner,
+  palegoldenrod,
+  #BDD9D5);
+}
+
+#radial06 {
+background-image:radial-gradient(
+     circle,
+      #BDD9D5 50%,
+      palegoldenrod 50%);
+background-size: 50px 50px;
+background-repeat:repeat;
+background-color: red;
+}
+input[type=range] {width: 360px;}
+.gradientpoop {position: absolute; top:0; right:0; left:0; bottom:0; pointer-events: none;
+	-webkit-transform:rotate(90deg);
+ 	-moz-transform:rotate(90deg);
+	-ms-transform:rotate(90deg);
+	-o-transform:rotate(90deg);
+	transform:rotate(90deg);
+}
+/* color: indianred;
+BDD9D5*/
+ </style>
+
+ <link rel="stylesheet" href="noprefix.css"  data-noprefix="true">
+  </head>
+  <body> <header>
+    <nav>
+        <ul>
+            <li class="button cancel" id="back">Back</li>
+            <li class="button done" id="next">Next</li>
+        </ul>
+    </nav>
+</header>
+
+  <div id="presentation">
+
+   <div id="presentation-counter"></div>
+
+   <div id="slides">
+
+
+
+
+
+<!-- library examples -->
+
+<div class="slide normal" id="">
+     <header><h1>Estelle Weyl</h1></header>
+     <section class="content">
+     <ul>
+         <li>@estellevw</li>
+         <li>@standardista</li>
+         <li>http://www.standardista.com</li>
+         <li>This deck: http://estelle.github.com/gradients/30.html</li>
+         <li>Deeper Dive: http://estelle.github.com/gradients/</li>
+     </ul>
+     </section>
+ </div>
+
+
+
+
+
+<!-- library examples -->
+<div class="slide normal greenbean grad1" id="slide1">
+     <header><h1>Plaid</h1></header>
+     <section class="content">
+     <input type="color" pattern="#[a-fA-F0-9]{6}"   onChange="document.getElementById('slide1').style.backgroundColor = this.value;">
+     </section>
+ </div>
+
+
+<!-- library examples -->
+<div class="slide normal classic grad1"  id="slide3">
+     <header><h1>Classic</h1></header>
+     <section class="content">
+     <input type="color" pattern="#[a-fA-F0-9]{6}"   onChange="document.getElementById('slide3').style.backgroundColor = this.value;">
+     </section>
+ </div>
+
+
+<!-- library examples -->
+<div class="slide normal inverse1 grad1"  id="slide4">
+     <header><h1>Disco Ball</h1></header>
+     <section class="content">
+     <input type="range" min="5" max="50" onChange="document.getElementById('slide4').style.backgroundSize = this.value + 'px,' + this.value + 'px,100%';">
+     </section>
+ </div>
+
+ <!-- library examples -->
+<div class="slide normal circlestripes grad1"  id="slide8">
+     <header><h1>circles &amp; Stripes</h1></header>
+     <section class="content">
+     <input type="color" pattern="#[a-fA-F0-9]{6}"   onChange="document.getElementById('slide8').style.backgroundColor = this.value;">
+     </section>
+ </div>
+ <!-- library examples -->
+<div class="slide normal bradybunch grad1"  id="slide9">
+     <header><h1>Brady Brunch</h1></header>
+     <section class="content">
+     <input type="color" pattern="#[a-fA-F0-9]{6}"   onChange="document.getElementById('slide9').style.backgroundColor = this.value;">
+     <input type="range" min="10" max="210" step="10" onChange="alter(this.value)">
+     <script>
+	 function alter(sz) {
+		 sz2 = sz +"px "
+		 	document.getElementById('slide9').style.backgroundSize = sz2 + sz2;
+			document.getElementById('slide9').style.backgroundPosition = "0 0, " + sz/2 + 'px ' + sz/2 + 'px';
+	 }
+	 </script>
+     </section>
+ </div>
+
+<!-- 4 kind of radients -->
+<div class="slide normal">
+     <header><h1>Gradients</h1></header>
+     <section class="content">
+     <ul>
+     <li>Anywhere an image can be used (theoretically)
+     	<ul><li>background-image, list-style-type, border-image, content, cursor</li></ul>
+     </li>
+     <li>4 Gradient Types
+     <ul class="medexampleshell" id="lgresize">
+     	<li class="medexample linear">linear-gradient();</li>
+     	<li class="medexample radial">radial-gradient();</li>
+     	<li class="medexample linrepeat">repeating-linear-gradient()</li>
+     	<li class="medexample radrepeat">repeating-radial-gradient()</li>
+     </ul>
+     </li>
+     </ul>
+     </section>
+ </div>
+
+<!-- W3C syntax -->
+ <div class="slide normal" style="background-image:
+    -webkit-gradient(linear, 0 0, 100% 100%,
+        color-stop(0.5, rgba(255, 255, 255, 0.25)),
+        color-stop(0.5, rgba(255, 255, 255, 0.5)),
+        color-stop(1, rgba(255, 255, 255, 0)));
+    background-image:
+    -moz-gradient(linear, 0 0, 100% 100%,
+        color-stop(0.5, rgba(255, 255, 255, 0.25)),
+        color-stop(0.5, rgba(255, 255, 255, 0.5)),
+        color-stop(1, rgba(255, 255, 255, 0)));
+    background-color: palegoldenrod">
+     <header style="background-color: rgba(255,255,255,0.5)"><h1 >Original Webkit Gradient Syntax</h1></header>
+     <section class="content">
+     <p>Really old Webkit Syntax (i.e. Older Android, iPhone devices)</p>
+     <pre contenteditable>-webkit-gradient(linear, startX startY, endX endY,
+      color-stop,
+      color-stop);</pre>
+      <p>Color Stop</p>
+      <pre contenteditable>color-stop(0-1, color)</pre>
+     <p>Example</p>
+     <pre contenteditable>background-image:
+    -webkit-gradient(linear, 0 0, 100% 100%,
+        color-stop(0.5, rgba(255, 255, 255, 0.25)),
+        color-stop(0.5, rgba(255, 255, 255, 0.5)),
+        color-stop(1, rgba(255, 255, 255, 0)));
+background-color: indianred;</pre>
+
+     </section>
+ </div>
+
+
+<div class="slide object">
+  <object data="files/oldlinearsyntax.html"></object>
+  <a href="files/oldlinearsyntax.html" class="objectlink" target="play">Try it out</a>
+ </div>
+
+<!-- prefixed syntax -->
+ <div class="slide normal">
+     <header><h1>Prefixed, older Linear Gradient Syntax</h1></header>
+     <section class="content">
+     <pre contenteditable>-prefix-gradient(<em>&lt;angle&gt;</em>|<em>&lt;term&gt;</em>, <em>&lt;colorstop&gt;</em>, <em>&lt;colorstop&gt;</em>)</pre>
+      <p>Color Stop</p>
+      <pre contenteditable>color length</pre>
+      <p>Example</p>
+     <pre contenteditable>background-image:
+     -prefix-linear-gradient(270deg,
+        indianred 0%,
+        palegoldenrod 100%);</pre>
+     </section>
+ </div>
+
+<!-- W3C syntax -->
+ <div class="slide normal">
+     <header><h1>W3C Standard Linear Gradient Syntax</h1></header>
+     <section class="content">
+     <pre contenteditable>linear-gradient(<em>&lt;angle&gt;</em>| to <em>&lt;term&gt;</em>, <em>&lt;colorstop&gt;</em>, <em>&lt;colorstop&gt;</em>)</pre>
+     <p>Key differences:</p>
+     <ol>
+      <li>Use 'to' with keyterms</li>
+      <li>Opposite direction for angles - counter clockwise (v. clockwise)</li>
+      <li>0deg is from left (v. 0deg from bottom)</li>
+     </ol>
+     </section>
+ </div>
+
+
+
+
+ <!-- W3C syntax -->
+ <div class="slide dark object basiclinearnoprefix">
+     <header><h1>W3C Standard Linear Gradient Syntax</h1></header>
+     <section class="content" style="margin-top:50px;">
+
+<pre contenteditable><span style="opacity: 0.3;">/* Archaic Syntax */</span>
+background-image:
+     -webkit-gradient(linear, 0 0, 0 100%,
+        color-stop(0.1, indianred),
+        color-stop(0.9, palegoldenrod);
+
+
+<span style="opacity: 0.3;">/* Supported prefixed syntax */</span>
+background-image:
+     -prefix-linear-gradient(top,
+        indianred 10%,
+        palegoldenrod 90%);
+
+
+<span style="opacity: 0.3;">/*  Standards Syntax FF16 / O 12.1 / Chrome 25 / IE 10 */ </span>
+background-image:
+    linear-gradient(to bottom,
+       indianred 10%,
+       palegoldenrod 90%); </pre>
+
+     </section>
+ </div>
+
+<!-- keyterm values -->
+ <div class="slide dark object basiclinear" id="basiclinear">
+     <header><h1>Magic Key Terms</h1></header>
+     <section class="content" style="margin-top:100px;">
+     <pre contenteditable>
+
+background: linear-gradient(<span id="basicgradient" style="font-weight: bold;"></span>
+     indianred, palegoldenrod);
+     </pre>
+      <select onChange="basicGradientChange();" id="slct_basicgradient">
+      <option value=""></option>
+        <option value="top">to top</option>
+        <option value="bottom">to bottom</option>
+        <option valut="left">to left</option>
+        <option value="right">to right</option>
+        <option value="top left">to top left</option>
+        <option value="top right">to top right</option>
+        <option value="bottom left">to bottom left</option>
+        <option value="bottom right">to bottom right</option>
+   </select>
+
+      <pre style="float: left" contenteditable>&lt;angle&gt;
+  to top
+  to bottom
+  to left
+  to right
+  to top left
+  to top right
+  to bottom left
+  to bottom right</pre>
+
+     <script defer="">
+      function basicGradientChange(event) {
+        var value = document.getElementById('slct_basicgradient').value, invertvalue;
+        console.log(value);
+        switch (value) {
+          case "top":
+             invertvalue = 'to right';
+             break;
+          case "bottom":
+             invertvalue = 'to left';
+             break;
+
+          case "left":
+             invertvalue = 'to top';
+             break;
+          case "right":
+             invertvalue = 'to bottom';
+             break;
+          case "top left":
+             invertvalue = 'to bottom right';
+             break;
+          case "bottom right":
+             invertvalue = 'to top left';
+             break;
+
+          case "bottom left":
+             invertvalue = 'to top right';
+             break;
+          case "top right":
+             invertvalue = 'to bottom left';
+             break;
+          default: invertvalue = '';
+        }
+                document.getElementsByClassName('basiclinearslide')[0].style.background =
+                    window.cssPrefix + 'linear-gradient(' + value + ', transparent 49.75%, black 49.75%, black 50%, transparent 50%)';
+        document.getElementById('basiclinear').style.background =
+           'linear-gradient(to ' + value + ', indianred, palegoldenrod)';
+
+        if(value) {
+                  document.getElementById('basicgradient').innerHTML = "to " + value + ", ";
+        } else {
+          document.getElementById('basicgradient').innerHTML = "";
+        }
+              }
+  </script>
+     </section>
+     <div class="basiclinearslide gradientpoop"></div>
+ </div>
+
+
+
+
+
+
+  <!-- simple syntax -->
+ <div class="slide dark object basiclinear">
+     <header><h1>Prefixed Linear Gradient Syntax</h1></header>
+     <section class="content" style="margin-top:50px;">
+
+<pre contenteditable>
+background-image:
+     -prefix-linear-gradient(
+        indianred,
+        palegoldenrod);
+
+
+background-image:
+     -prefix-linear-gradient(top,
+        indianred,
+        palegoldenrod);
+
+
+background-image:
+     -prefix-linear-gradient(270deg,
+        indianred 0%,
+        palegoldenrod 100%);
+</pre>
+</section>
+</div>
+
+
+
+ <div class="slide object">
+  <header><h1>Prefixed Linear Syntax</h1></header>
+  <object data="files/prefixedlinearsyntax.html"></object>
+  <a href="files/prefixedlinearsyntax.html" class="objectlink" target="play">Try it out</a>
+ </div>
+
+
+
+
+
+
+
+
+
+ <div class="slide object">
+  <header><h1>Standards Syntax</h1></header>
+  <object data="files/w3clinearsyntax.html"></object>
+  <a href="files/w3clinearsyntax.html" class="objectlink" target="play">Try it out</a>
+ </div>
+
+
+
+ <div class="slide object">
+  <header><h1>Hard Stops &amp; End Points</h1></header>
+  <object data="files/keytermsyntax.html"></object>
+  <a href="files/keytermsyntax.html" class="objectlink" target="play">Try it out</a>
+ </div>
+
+
+
+ <div class="slide object">
+  <header><h1>With background size</h1></header>
+  <object data="files/bgsize.html"></object>
+  <a href="files/bgsize.html" class="objectlink" target="play">Try it out</a>
+ </div>
+
+<!-- tips on gradients -->
+ <div class="slide ">
+     <header><h1>Tips on Gradient</h1></header>
+     <section class="content">
+     <ul>
+     	<li>vendor-prefix &lsquo;linear-gradient&rsquo; and &lsquo;radial-gradient&rsquo; </li>
+     	<li>keyword &lsquo;transparent&rsquo; = rgba(0,0,0,0) so fades to grey</li>
+     	<li>create effects with color stops at same location</li>
+        <li>create effects by adding multiple gradients, playing with position and size</li>
+        <li>learn from others: <a href="http://leaverou.me/css3patterns/">Lea Verou's Gradients</a>, <a href="http://www.standardista.com/cssgradients">Estelle Weyl's Gradients</a>, and <a href="http://www.standardista.com/CSS3gradients/flags.html">Estelle's Flags</a></li>
+        <li>Use tools: <a href="http://westciv.com/tools/gradientsnustyle/">John Allsopp's tool</a>, <a href="http://gradients.glrzad.com/">Damian Galarza's tool</a>, <a href="http://www.colorzilla.com/gradient-editor/">Colorzilla</a></li>
+     </ul>
+     <ul class="icons" style="margin:0">
+         <li class="chrome">Chrome 3* <br/>Chrome 10</li>
+         <li class="safari">Safari 4* <br/>Safari 5.1</li>
+         <li class="firefox">Firefox 3.6<br/>Firefox 10**</li>
+         <li class="opera new">Opera 11.1<br/>&nbsp;</li>
+         <li class="ie new">Internet Explorer 10</li>
+
+     </ul><p style="margin-top: 0">Prefixed -webkit-, -moz-, -ms-, -o-</p>
+     <p>* legacy syntax, ** future syntax</p>
+     </section>
+     </div>
+
+
+ <!-- radial gradients title-->
+ <div class="slide intro">
+     <header><h1>Radial Gradients</h1></header>
+     <p>We're not covering radial gradients. They're REALLY bad for performance reasons. But, the slides are here if you want to learn about them later.</p>
+
+     <p>Continue: <a href="../mobilecss/index2.html">Mobile CSS3</a></p>
+ </div>
+
+
+
+ <!-- radial gradients -->
+ <div class="slide object" id="radial01">
+     <header><h1>Radial Gradients</h1></header>
+     <section class="content">
+     <pre contenteditable>.thisSlide {
+  background-image:
+    <span contenteditable id="radialfeature01" onKeyUp="changeBackgroundGradient('radial01','#radialfeature01')">radial-gradient(
+      palegoldenrod,
+      #BDD9D5)</span>;
+}</pre>
+     </section>
+ </div>
+
+
+ <!-- radial gradients -->
+ <div class="slide object" id="radial02">
+     <header><h1>Radial Gradients</h1></header>
+     <section class="content">
+     <pre contenteditable>.thisSlide {
+  background-image:
+    <span contenteditable id="radialfeature02" onKeyUp="changeBackgroundGradient('radial02','#radialfeature02')">radial-gradient(25% 35%,
+      palegoldenrod,
+      #BDD9D5)</span>;
+}</pre>
+     </section>
+ </div>
+
+
+
+ <!-- radial gradients -->
+ <div class="slide object" id="radial03">
+     <header><h1>Radial Gradients</h1></header>
+     <section class="content">
+     <pre contenteditable>.thisSlide {
+  background-image:
+    <span contenteditable id="radialfeature03" onKeyUp="changeBackgroundGradient('radial03','#radialfeature03')">radial-gradient(25% 35%,
+      palegoldenrod 20%,
+      #BDD9D5 20%)</span>;
+}</pre>
+     </section>
+ </div>
+
+<!-- radial shape -->
+ <div class="slide object" id="radial04">
+     <header><h1>Shape</h1></header>
+     <section class="content">
+     <pre contenteditable>.thisSlide {
+  background-image:
+    <span contenteditable id="radialfeature04" onKeyUp="changeBackgroundGradient('radial04','#radialfeature04')">radial-gradient(75% 75%, circle,
+      palegoldenrod 20%,
+      #BDD9D5 20%)</span>;
+}</pre>
+<ul>
+	<li>circle</li>
+    <li class="imp">ellipse</li>
+</ul>
+     </section>
+ </div>
+
+<!-- radial size -->
+  <div class="slide object" id="radial05">
+     <header><h1>Size</h1></header>
+     <section class="content">
+     <pre contenteditable>.thisSlide {
+  background-image:
+    <span contenteditable id="radialfeature05" onKeyUp="changeBackgroundGradient('radial05','#radialfeature05')">radial-gradient(75% 75%,
+     farthest-corner,
+      palegoldenrod,
+      #BDD9D5)</span>;
+}</pre>
+<ul>
+	<li>closest-side</li>
+<li>closest-corner</li>
+<li>farthest-side</li>
+<li class="imp">farthest-corner</li>
+<li>contain (same as closest-side)</li>
+<li>cover (same as farthest-corner)</li>
+</ul>
+     </section>
+ </div>
+
+<!-- effects1 -->
+   <div class="slide object" id="radial06">
+     <header><h1>with Background size</h1></header>
+     <section class="content">
+     <pre style="background-color: rgba(255,255,255,0.9)">.thisSlide {
+  background-image:
+    <span contenteditable id="radialfeature06" onKeyUp="changeBackgroundGradient('radial06','#radialfeature06')">radial-gradient(
+     circle,
+      #BDD9D5 50%,
+      palegoldenrod 50%)</span>;
+  background-size: <span id="radialfeature06b" onKeyUp="changeFeature('backgroundSize', 'radialfeature06b', 'radial06')" contenteditable>100px 100px</span>;
+  background-repeat: <span id="radialfeature06c" onKeyUp="changeFeature('backgroundRepeat', 'radialfeature06c', 'radial06')" contenteditable>repeat</span>;
+  background-color: <span id="radialfeature06d" onKeyUp="changeFeature('backgroundColor', 'radialfeature06d', 'radial06')" contenteditable>red</span>;
+}</pre>
+
+     </section>
+ </div>
+
+ <div class="slide normal" id="">
+      <header><h1>Estelle Weyl</header>
+      <section class="content">
+      <ul>
+          <li>@estellevw</li>
+          <li>@standardista</li>
+          <li>http://www.standardista.com</li>
+      </ul>
+
+
+      <p>Up Next?</p>
+      <ul>
+        <li><a href="../mobilecss/index2.html">Mobile CSS3</a></li>
+        <li>CSS Workshop -> <a href="../CSS-Workshop/part_10_transforms.html">Transforms</a></li>
+      </ul>
+      </section>
+  </div>
+
+
+  </div>
+  </div>
+  <script src="slide.js"></script>
+  <script defer>
+   function changeFeature(changestyle, content, slide) {
+	   document.getElementById(slide).style[changestyle] = document.getElementById(content).innerHTML;
+   }
+   function changeBackgroundGradient(pageID,changedText){
+	   	document.getElementById(pageID).style.backgroundImage = document.querySelector(changedText).innerHTML;
+   }
+
+   </script>
+  <script src="prefixfree.js"></script>
+  </body>
+</html>
