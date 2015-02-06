@@ -237,13 +237,13 @@ background-image:
 }
 #radial02 {
 background-image:
-  radial-gradient(25% 35%,
+  radial-gradient(at 25% 35%,
   palegoldenrod,
   #BDD9D5);
 }
 #radial03 {
 background-image:
-  radial-gradient(25% 35%,
+  radial-gradient(at 25% 35%,
   palegoldenrod 20%,
   #BDD9D5 20%);
 }
@@ -412,14 +412,15 @@ BDD9D5*/
      </section>
  </div>
 
+
+<div class="slide figure">
+<figure><object data="http://caniuse.com/#search=gradient"></object></figure>
+  <a href="http://caniuse.com/#search=gradient" target="play" title="open resource in new window">➹</a>
+
+</div>
 <!-- W3C syntax -->
  <div class="slide normal" style="background-image:
     -webkit-gradient(linear, 0 0, 100% 100%,
-        color-stop(0.5, rgba(255, 255, 255, 0.25)),
-        color-stop(0.5, rgba(255, 255, 255, 0.5)),
-        color-stop(1, rgba(255, 255, 255, 0)));
-    background-image:
-    -moz-gradient(linear, 0 0, 100% 100%,
         color-stop(0.5, rgba(255, 255, 255, 0.25)),
         color-stop(0.5, rgba(255, 255, 255, 0.5)),
         color-stop(1, rgba(255, 255, 255, 0)));
@@ -438,7 +439,7 @@ BDD9D5*/
         color-stop(0.5, rgba(255, 255, 255, 0.25)),
         color-stop(0.5, rgba(255, 255, 255, 0.5)),
         color-stop(1, rgba(255, 255, 255, 0)));
-background-color: indianred;</pre>
+background-color: palegoldenrod;</pre>
 
      </section>
  </div>
@@ -529,7 +530,6 @@ background-image:
   gradient(linear, 0 0, 0 100%, indianred, palegoldenrod);
 
 <span style="opacity: 0.3;">/* Supported prefixed syntax // all the same */</span>
-
 background-image:
   linear-gradient(top, indianred 0%, palegoldenrod 100%);
 
@@ -940,15 +940,6 @@ background-size: <span id="feature05" onKeyUp="changeFeature('backgroundSize', '
         <li>learn from others: <a href="http://leaverou.me/css3patterns/">Lea Verou's Gradients</a>, <a href="http://www.standardista.com/cssgradients">Estelle Weyl's Gradients</a>, and <a href="http://www.standardista.com/CSS3gradients/flags.html">Estelle's Flags</a></li>
         <li>Use tools: <a href="http://westciv.com/tools/gradientsnustyle/">John Allsopp's tool</a>, <a href="http://gradients.glrzad.com/">Damian Galarza's tool</a>, <a href="http://www.colorzilla.com/gradient-editor/">Colorzilla</a></li>
      </ul>
-     <ul class="icons" style="margin:0">
-         <li class="chrome">Chrome 3* <br/>Chrome 10</li>
-         <li class="safari">Safari 4* <br/>Safari 5.1</li>
-         <li class="firefox">Firefox 3.6<br/>Firefox 10**</li>
-         <li class="opera new">Opera 11.1<br/>&nbsp;</li>
-         <li class="ie new">Internet Explorer 10</li>
-
-     </ul><p style="margin-top: 0">Prefixed -webkit-, -moz-, -ms-, -o-</p>
-     <p>* legacy syntax, ** future syntax</p>
      </section>
      </div>
 
@@ -980,13 +971,12 @@ background-size: <span id="feature05" onKeyUp="changeFeature('backgroundSize', '
      <section class="content">
      <pre contenteditable>.thisSlide {
   background-image:
-    <span contenteditable id="radialfeature02" onKeyUp="changeBackgroundGradient('radial02','#radialfeature02')">radial-gradient(25% 35%,
+    <span contenteditable data-function="changebg" id="radialfeature02" data-function="changeBackgroundGradient('radial02','#radialfeature02')">radial-gradient(at 25% 35%,
       palegoldenrod,
       #BDD9D5)</span>;
 }</pre>
      </section>
  </div>
-
 
 
  <!-- radial gradients -->
@@ -995,7 +985,7 @@ background-size: <span id="feature05" onKeyUp="changeFeature('backgroundSize', '
      <section class="content">
      <pre contenteditable>.thisSlide {
   background-image:
-    <span contenteditable id="radialfeature03" onKeyUp="changeBackgroundGradient('radial03','#radialfeature03')">radial-gradient(25% 35%,
+    <span id="radialfeature03" onkeyup="changeBackgroundGradient('radial03','#radialfeature03')"  contenteditable>radial-gradient(at 25% 35%,
       palegoldenrod 20%,
       #BDD9D5 20%)</span>;
 }</pre>
@@ -1078,14 +1068,24 @@ background-size: <span id="feature05" onKeyUp="changeFeature('backgroundSize', '
   </div>
   </div>
   <script src="slide.js"></script>
-  <script defer>
+  <script>
    function changeFeature(changestyle, content, slide) {
 	   document.getElementById(slide).style[changestyle] = document.getElementById(content).innerHTML;
    }
-   function changeBackgroundGradient(pageID,changedText){
-	   	document.getElementById(pageID).style.backgroundImage = document.querySelector(changedText).innerHTML;
+
+
+
+   function changeBackgroundGradient (pageID, changedText) {
+      document.getElementById(pageID).style.backgroundImage = document.querySelector(changedText).innerHTML;
    }
 
+   var els = document.querySelectorAll('[data-function=changebg]');
+   for(var i = 0; i < els.count; i++) {
+      els[i].addEventListener('keyup', function (e) {
+        console.log(e.target);
+      });
+   }
    </script>
+
   </body>
 </html>
