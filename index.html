@@ -521,7 +521,7 @@ background-image:
 
  <!-- W3C syntax -->
  <div class="slide dark object basiclinearnoprefix">
-     <header><h1>W3C Standard Linear Gradient Syntax</h1></header>
+     <header><h1>Three Versions of Linear Gradient Syntax</h1></header>
      <section class="content" style="margin-top:50px;">
 
 <pre contenteditable><span style="opacity: 0.3;">/* Previous Syntax */</span>
@@ -565,14 +565,14 @@ background: linear-gradient(<span id="basicgradient"></span>indianred, palegolde
      </pre>
       <select onChange="basicGradientChange();" id="slct_basicgradient">
    		<option value=""></option>
-        <option value="top">to top</option>
-        <option value="bottom">to bottom</option>
-        <option valut="left">to left</option>
-        <option value="right">to right</option>
-        <option value="top left">to top left</option>
-        <option value="top right">to top right</option>
-        <option value="bottom left">to bottom left</option>
-        <option value="bottom right">to bottom right</option>
+        <option value="to top">to top</option>
+        <option value="to bottom">to bottom</option>
+        <option valut="to left">to left</option>
+        <option value="to right">to right</option>
+        <option value="to top left">to top left</option>
+        <option value="to top right">to top right</option>
+        <option value="to bottom left">to bottom left</option>
+        <option value="to bottom right">to bottom right</option>
    </select>
 
    		<pre style="float: left" contenteditable>&lt;angle&gt;
@@ -619,9 +619,9 @@ background: linear-gradient(<span id="basicgradient"></span>indianred, palegolde
 					default: invertvalue = '';
 				}
                 document.getElementsByClassName('basiclinearslide')[0].style.background =
-                     'linear-gradient( to ' + value + ', transparent 49.75%, black 49.75%, black 50%, transparent 50%)';
+                     'linear-gradient(' + value + ', transparent 49.75%, black 49.75%, black 50%, transparent 50%)';
 				document.getElementById('basiclinear').style.background =
-					 'linear-gradient(to ' + value + ', indianred, palegoldenrod)';
+					 'linear-gradient(' + value + ', indianred, palegoldenrod)';
 
 				if(value) {
                 	document.getElementById('basicgradient').innerHTML = value + ", ";
@@ -643,7 +643,7 @@ background: linear-gradient(<span id="basicgradient"></span>indianred, palegolde
 
 
 
- <!-- angle values -->
+ <!-- angle values
  <div class="slide dark object basiclinear" id="slide_basiclinearangles">
      <header><h1>Linear Gradient Angles</h1></header>
      <section class="content" style="margin-top:100px;">
@@ -677,7 +677,7 @@ background: linear-gradient(<span id="basiclinearangles"></span>indianred, paleg
      </section>
      <div class="slide_basiclinearangles gradientpoop"></div>
  </div>
-
+ -->
 
 
 <!-- angle values -->
@@ -779,7 +779,7 @@ background: linear-gradient(<span id="anglevkeyterm"></span>indianred, palegolde
      </section>
  </div>
 
-<!-- color stops -->
+<!-- color stops
  <div class="slide object rainbow" id="rainbow">
      <header><h1>Adding Colors</h1></header>
      <section class="content" style="margin-top:100px;">
@@ -794,7 +794,7 @@ background: linear-gradient(<span id="anglevkeyterm"></span>indianred, palegolde
     )</span>;
      </section>
  </div>
-
+ -->
 <!-- color stops -->
  <div class="slide object rainbow" id="rainbow3">
      <header><h1>Color Stops</h1></header>
@@ -933,7 +933,7 @@ background-size: <span id="feature05" onKeyUp="changeFeature('backgroundSize', '
      <header><h1>Tips on Gradient</h1></header>
      <section class="content">
      <ul>
-     	<li>vendor-prefix &lsquo;linear-gradient&rsquo; and &lsquo;radial-gradient&rsquo; </li>
+     	<li>no need to vendor-prefix (unless you want poor mobile performance</li>
      	<li>keyword &lsquo;transparent&rsquo; = rgba(0,0,0,0) so fades to grey</li>
      	<li>create effects with color stops at same location</li>
         <li>create effects by adding multiple gradients, playing with position and size</li>
